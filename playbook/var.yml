@@ -1,0 +1,58 @@
+# VPC details
+vpc_cidr: "10.0.0.0/20"
+region: "eu-west-1"
+vpc_name: "New_VPC_Ansible"
+tags:
+  Name: "New_VPC_Ansibe"
+
+use_existing_vpc: false  # Set to true if using an existing VPC
+existing_vpc_id: ""      # Provide the existing VPC ID if available
+
+# Public subnet CIDR blocks
+public_subnet_cidr_az1: "10.0.0.0/22"
+public_subnet_cidr_az2: "10.0.4.0/22"
+
+# Private subnet CIDR blocks
+private_subnet_cidr_az1: "10.0.8.0/22"
+private_subnet_cidr_az2: "10.0.12.0/22"
+
+# Availability Zones
+availability_zone_1: "eu-west-1a"
+availability_zone_2: "eu-west-1b"
+
+# Security Groups Names
+frontend_sg_name: "an-Frontend-SG"
+backend_sg_name: "an-Backend-SG"
+rds_sg_name: "an-RDS-SG"
+
+# Key-Pair details
+ec2_key_pair_name: "access_key"
+key_file_path: "/home/ubuntu/Ansible/role_access_key.pem"
+key_name: "access_key"
+key_file_owner: "ubuntu"
+key_file_group: "ubuntu"
+key_file_permissions: '0400'
+
+# RDS instance details
+db_subnet_group_name: "RDS-Sub-Grp"
+db_instance_class: "db.t3.micro"
+rds_instance_identifier: "myrdsdbrole"
+rds_username: "admin"
+rds_password: "Shreyas28"
+rds_db_name: "myrdsdb"
+
+# Frontend Details
+frontend_instance_name: "Frontend_Instance"
+frontend_instance_type: "t2.micro"
+frontend_ami: "ami-0a422d70f727fe93e"
+
+# Backend Details
+backend_instance_name: "Backend_Instance"
+backend_instance_type: "t2.micro"
+backend_ami: "ami-0a422d70f727fe93e"
+
+# Dynamic Inventry
+inventry_path: "/home/ubuntu/Ansible/inventory.ini"
+
+## ***  Frontend Configuration
+frontend_key_path: "/home/ubuntu/role_access_key.pem"

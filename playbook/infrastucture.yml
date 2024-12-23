@@ -1,0 +1,10 @@
+---
+- name: Set up AWS VPC, Subnets, and Route Tables using custom collection
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - var.yml
+  collections:
+    - my_namespace.my_collection   # Specify the collection to be used
+  roles:
+    - vpc_setup  # Refer to the role defined in the collection
